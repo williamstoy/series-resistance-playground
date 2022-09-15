@@ -38,6 +38,7 @@ c = 1/(Rs * Cm);
 lambda = -(1 + Rs/Rm)*(1/(Rs * Cm));
 b_z = [T * c, 0];
 a_z = [1, -exp(lambda * T)];
+
 %% Plot Laplace and Z transform Bode Plots
 w = logspace(-1, 5, 100); % radians / second
 sys_continuous = tf(b_laplace, a_laplace);
